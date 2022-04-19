@@ -35,10 +35,14 @@
           <span></span>
         </div>
       </div>
-
       <div id="navbarExample" class="navbar-menu">
         <div class="navbar-end">
           <div class="field is-grouped">
+            <p class="control">
+              <span> <%= "Hello! " + current_user.username if user_signed_in? %>  </span>
+              <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "button is-info is inverted" if user_signed_in?  %>
+              <%= link_to 'Login', new_user_session_path , class: "button is-info is inverted" unless user_signed_in?  %>
+            </p>
             <p class="control">
               <%= link_to "New Tweeet", new_tweeet_path, class: "button is-info is-inverted" %>
             </p>
@@ -46,7 +50,6 @@
         </div>
       </div>
     </nav>
-
     <%= yield %>
   </body>
 </html>
