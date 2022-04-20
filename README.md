@@ -1,10 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version: 3.0.0
 
 * Rails version:  7.0.2
@@ -13,15 +6,35 @@ Things you may want to cover:
 
 [Bundler](https://bundler.io/) 
 
-``` 
-gem install bundler
-```
 
 * Configuration
 
-* Database creation
+```
+$ git clone git@github.com:stellamiranda/taller_codigo_facilito.git
+```
 
+```
+$ cd taller_codigo_facilito
+```
+
+* Instalación de dependencias
 
 ``` 
-rails db:setup
+$ gem install bundler
+```
+
+```
+$ bundle
+```
+
+* Configuración de la Base de datos
+
+``` 
+$ rails db:setup
+```
+
+* Inicializacion del Servidor
+
+```
+$ rails server
 ```
