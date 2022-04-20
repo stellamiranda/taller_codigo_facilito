@@ -1,24 +1,40 @@
-# README
+* Ruby version: 3.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Rails version:  7.0.2
 
-Things you may want to cover:
+* System dependencies:
 
-* Ruby version
+[Bundler](https://bundler.io/) 
 
-* System dependencies
 
 * Configuration
 
-* Database creation
+```
+$ git clone git@github.com:stellamiranda/taller_codigo_facilito.git
+```
 
-* Database initialization
+```
+$ cd taller_codigo_facilito
+```
 
-* How to run the test suite
+* Instalación de dependencias
 
-* Services (job queues, cache servers, search engines, etc.)
+``` 
+$ gem install bundler
+```
 
-* Deployment instructions
+```
+$ bundle
+```
 
-* ...
+* Configuración de la Base de datos
+
+``` 
+$ rails db:setup
+```
+
+* Inicializacion del Servidor
+
+```
+$ rails server
+```
