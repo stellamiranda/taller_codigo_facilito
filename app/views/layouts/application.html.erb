@@ -13,13 +13,15 @@
 
   <body>
     <% if flash[:notice] %>
-      <div class=".notification.is_primary.global-notification">
+      <div class="notification is_primary global-notification">
+        <button class="delete"></button>
         <p class="notice"><%= notice %></p>
       </div>
     <% end %>
 
     <% if flash[:alert] %>
-      <div class=".notification.is_danger.global-notification">
+      <div class="notification is_danger global-notification">
+        <button class="delete"></button>
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
@@ -39,7 +41,6 @@
         <div class="navbar-end">
           <div class="field is-grouped">
             <p class="control">
-              <span> <%= "Hello! " + current_user.username if user_signed_in? %>  </span>
               <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "button is-info is inverted" if user_signed_in?  %>
               <%= link_to 'Login', new_user_session_path , class: "button is-info is inverted" unless user_signed_in?  %>
             </p>
