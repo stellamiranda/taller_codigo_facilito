@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @tweeet %>
-
-<div>
-  <%= link_to "Edit this tweeet", edit_tweeet_path(@tweeet) %> |
-  <%= link_to "Back to tweeets", tweeets_path %>
-
-  <%= button_to "Destroy this tweeet", @tweeet, method: :delete %>
-</div>
+<section class="section">
+  <div class="container">
+    <div class="columns">    
+      <div class="column is-half">
+        <p style="color: green"><%= notice %></p>
+        <%= render @tweeet %>
+          <%= link_to "Edit this tweeet", edit_tweeet_path(@tweeet) %> |
+          <%= link_to "Back to tweeets", tweeets_path %>
+          <%= button_to "Destroy this tweeet", @tweeet, method: :delete %>
+      </div>
+    </div>
+  </div>
+</section>

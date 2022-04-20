@@ -16,23 +16,43 @@
 
  @import "bulma";
 
- 
 
- .nav-brand .title{
+ .navbar-brand .title{
      color: white;
  }
-
+ 
  // round images
-
- .image {
-     border-radius: 50%;
-
- }
-
- img{
-    border-radius: 50%;
+.image {
+  border-radius: 50%;
 }
 
- .notification:not(:last-child){
-     margin-bottom: 0;
- }
+img {
+  border-radius: 50%;
+}
+
+.notification:not(:last-child){
+  margin-bottom: 0;
+}
+
+.nav-brand .h1{
+  color: white;
+}
+
+.navbar-end p{
+  text-align:center;
+  height:40px;
+  display:table;
+}
+
+span{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.control{
+  margin: 5px;
+}
+
+.button {
+  margin: 5px;
+}
