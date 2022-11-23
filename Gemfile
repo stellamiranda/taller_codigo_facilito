@@ -3,15 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-gem 'jquery-rails'
+gem "jquery-rails"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -27,6 +26,8 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+gem "minitest"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -40,20 +41,20 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'bulma-rails', '~> 0.9.3'
+gem "bulma-rails", "~> 0.9.3"
 
-gem 'simple_form', '~> 5.1'
+gem "simple_form", "~> 5.1"
 
-gem 'gravatar_image_tag', '~> 1.2'
+gem "gravatar_image_tag", "~> 1.2"
 
-gem 'devise', '~> 4.8', '>= 4.8.1'
+gem "devise", "~> 4.8", ">= 4.8.1"
 
-gem 'font-awesome-sass'
+gem "font-awesome-sass"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -62,16 +63,21 @@ gem 'font-awesome-sass'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug"
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "json"
+  gem "pry"
+  gem "rubocop"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  gem 'guard', '~> 2.18'
+  gem "better_errors", "~> 2.9", ">= 2.9.1"
+  gem "guard", "~> 2.18"
 
   gem "letter_opener"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -85,3 +91,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "ruby-lsp", "~> 0.3.6", group: :development
